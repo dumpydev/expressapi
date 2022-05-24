@@ -1,0 +1,25 @@
+{
+  "name": "editthis",
+  "version": "1.0.0",
+  "description": "jsboilerplate",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dumpydev/jsboilerplate.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "dumpy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dumpydev/jsboilerplate/issues"
+  },
+  "homepage": "https://github.com/dumpydev/jsboilerplate#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}

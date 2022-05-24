@@ -1,0 +1,2 @@
+# Basic JS boilerplate
+Yep.
