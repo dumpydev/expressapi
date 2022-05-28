@@ -1,25 +1,28 @@
 {
-  "name": "editthis",
+  "name": "expressapi",
   "version": "1.0.0",
   "description": "jsboilerplate",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dumpydev/jsboilerplate.git"
+    "url": "git+https://github.com/dumpydev/expressapi.git"
   },
   "keywords": [
     "js"
   ],
   "author": "dumpy",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dumpydev/jsboilerplate/issues"
-  },
-  "homepage": "https://github.com/dumpydev/jsboilerplate#readme",
+  "homepage": "https://github.com/dumpydev/expressapi",
   "dependencies": {
-    "colors": "^1.4.0"
+    "ascii-table": "^0.0.9",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "quick.db": "^7.1.3",
+    "uuid": "^8.3.2"
   }
 }
