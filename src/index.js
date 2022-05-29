@@ -11,6 +11,9 @@ import AsciiTable from 'ascii-table';
 import express from 'express';
 import colors from 'colors';
 import db from 'quick.db';
+import fs from 'node:fs';
+import path, { dirname } from 'node:path';
+
 const app = express();
 app.use(function (req, res, next) {
     res.setHeader('Content-Type', 'application/json');
@@ -23,40 +26,8 @@ app.use(function (req, res, next) {
     next();
 })
 app.get('/html', (req, res) => {
-    res.send(`
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-    </head>
-    <style>
-        body {
-            background-color: #1a1a1a;
-            color: #fff;
-            font-family: 'Roboto', sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
-    <body>
-        <h1>Hello World</h1>
-        <h1>Welcome to dumpy's API.</h1>
-        <h2>Here are the available endpoints:</h2>
-        <ul>
-            <li>/html (GET) (current page)</li>
-            <li>/send (GET)</li>
-            <li>/ (POST)</li>
-            <li>/messages (GET)</li>
-            <li>/messages (POST)</li>
-        </ul>
-        <h1>NOOOT NOOOT</h1>
-    </body>
-    `);
+    res.setHeader('Content-Type', 'text/html')
+    res.sendFile(path.join('/home/ubuntu/expressapi', '/html/index.html'));
 })
 app.post('/', (req, res) => {
     var host = req.get('host');
@@ -113,7 +84,8 @@ app.get('/send', (req, res) => {
         console.log('Message saved!'.green);
     }
     return res.send(JSON.stringify({
-        "status": message ? "Message Saved!" : "To send a message, add message:*your message* to the headers or params"
+        "status": message ? "Message Saved!" : "To send a message, add message:*your message* to the headers or params",
+        "success": message ? true : false
     }));
 });
 app.get('/messages', (req, res) => {

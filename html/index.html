@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        color:white;
+    }
+    html {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        text-align: center;
+        background: linear-gradient(to right, #6666ff, #0099ff, #7d00c5, #ff3399, #6666ff);
+        color: transparent;
+        animation: rainbow_animation 5s ease-in-out infinite;
+        background-size: 400% 100%;
+    }
+
+    @keyframes rainbow_animation {
+
+        0%,
+        100% {
+            background-position: 0 0;
+        }
+
+        50% {
+            background-position: 200% 0;
+        }
+    }
+    
+</style>
+
+<body>
+    <div class="main">
+        <h1>Hello World</h1>
+        <h1>Welcome to dumpy's API.</h1>
+        <h2>Here are the available endpoints:</h2>
+        <ul>
+            <li>/html (GET) (current page)</li>
+            <li>/send (GET)</li>
+            <li>/ (POST)</li>
+            <li>/messages (GET) (AUTHENTICATION REQUIRED)</li>
+            <li>/messages (POST) (AUTHENTICATION REQUIRED)</li>
+        </ul>
+        <h1>NOOOT NOOOT</h1>
+    </div>
+
+</body>
